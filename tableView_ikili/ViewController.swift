@@ -30,13 +30,17 @@ class ViewController: UIViewController {
 
 }
 
+//extension kullanımı, gerekli protokolleri eklemek için
+ 
 extension ViewController:UITableViewDelegate,UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var veriSayisi:Int?
+        //tableViewe göre kontrol sağladık
         if tableView == tableViewUlkeler {
             veriSayisi = ulkeler.count
         }
